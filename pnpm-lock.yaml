@@ -8,9 +8,19 @@ importers:
 
   .:
     dependencies:
+      '@netlify/functions':
+        specifier: ^4.1.5
+        version: 4.1.5
+      http-errors:
+        specifier: ^2.0.0
+        version: 2.0.0
       netlify-cli:
         specifier: ^22.1.3
         version: 22.1.3(@types/node@24.0.1)(picomatch@4.0.2)
+    devDependencies:
+      '@types/http-errors':
+        specifier: ^2.0.5
+        version: 2.0.5
 
 packages:
 
@@ -295,6 +305,10 @@ packages:
   '@netlify/binary-info@1.0.0':
     resolution: {integrity: sha512-4wMPu9iN3/HL97QblBsBay3E1etIciR84izI3U+4iALY+JHCrI+a2jO0qbAZ/nxKoegypYEaiiqWXylm+/zfrw==}
 
+  '@netlify/blobs@10.0.0':
+    resolution: {integrity: sha512-+sECjk88bi+USJ89XmiwWJOrJ5m7qgajhmUYzb1kD25NLZN9AxfewlHlnm2T5iIB9wEZ0XqSr65ycqWxX4SE1A==}
+    engines: {node: ^14.16.0 || >=16.0.0}
+
   '@netlify/blobs@9.1.5':
     resolution: {integrity: sha512-rHo+qOUcQ2E5sbSyNy1wAffF/v8wCAj0OCaI2q29Gn83uBwk0ZAYFYiWfvir56+UItS2Add/nKuW1qOYF/ho3g==}
     engines: {node: ^14.16.0 || >=16.0.0}
@@ -328,6 +342,10 @@ packages:
     resolution: {integrity: sha512-tk7sByKudgHQax/fNOPBNli7Rc799vxF7kx+by3/OqWHotkqXBKhYUASkWtiNd7hY3VskdNba94o6O9GzV80fA==}
     engines: {node: ^18.14.0 || >=20}
 
+  '@netlify/dev-utils@3.2.0':
+    resolution: {integrity: sha512-5QPVts2j7RHMNVPVB7E28TC564TarS2JDTfMzKGzCrAY35bvOcfJ60Hhp8DOVjI13+BJgN37srUJP4OBDIXCfg==}
+    engines: {node: ^18.14.0 || >=20}
+
   '@netlify/edge-bundler@14.0.6':
     resolution: {integrity: sha512-wfIS26778TG34C3Ma4vhYVTviUuZMD1cWVW/G3m9qZ4MPqC3xII66mmJOdHSfBhwXNeu8tt/b3YoFO0b/nJO0Q==}
     engines: {node: '>=18.14.0'}
@@ -342,6 +360,10 @@ packages:
   '@netlify/functions-utils@6.0.10':
     resolution: {integrity: sha512-PqXyvmVmrNQgVZpyuWykS4mX7Tm2Ry8Ys/nWlDR/cHv2E+MaRiyyneAN4qrCe25z6mSS+sTCf8ZVQtZf2y1xYg==}
     engines: {node: '>=18.14.0'}
+
+  '@netlify/functions@4.1.5':
+    resolution: {integrity: sha512-yJuK3dEIPauruTmDRKZcNKlDOnggBy14StCJp7u4QYlcVD5cxP0p0HPByaidvj3mXrqEDUR4mYWYfGZXqCyeCg==}
+    engines: {node: '>=18.0.0'}
 
   '@netlify/git-utils@6.0.2':
     resolution: {integrity: sha512-ASp8T6ZAxL5OE0xvTTn5+tIBua5F8ruLH7oYtI/m2W/8rYb9V3qvNeenf9SnKlGj1xv6mPv8l7Tc93kmBLLofw==}
@@ -452,6 +474,10 @@ packages:
   '@netlify/runtime-utils@2.1.0':
     resolution: {integrity: sha512-z1h+wjB7IVYUsFZsuIYyNxiw5WWuylseY+eXaUDHBxNeLTlqziy+lz03QkR67CUR4Y790xGIhaHV00aOR2KAtw==}
     engines: {node: ^18.14.0 || >=20}
+
+  '@netlify/serverless-functions-api@2.1.1':
+    resolution: {integrity: sha512-MNYfEmZC6F7ZExOrB/Hrfkif7JW2Cbid9y5poTFEJ6rcAhCLQB8lo0SGlQrFXgKvXowXB14IjpOubaQu2zsyfg==}
+    engines: {node: '>=18.0.0'}
 
   '@netlify/serverless-functions-api@2.1.2':
     resolution: {integrity: sha512-uEFA0LAcBGd3+fgDSLkTTsrgyooKqu8mN/qA+F/COS2A7NFWRcLFnjVKH/xZhxq+oQkrSa+XPS9qj2wgQosiQw==}
@@ -700,6 +726,9 @@ packages:
 
   '@types/http-cache-semantics@4.0.4':
     resolution: {integrity: sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==}
+
+  '@types/http-errors@2.0.5':
+    resolution: {integrity: sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==}
 
   '@types/http-proxy@1.17.16':
     resolution: {integrity: sha512-sdWoUajOB1cd0A8cRRQ1cfyWNbmFKLAqBB89Y8x5iYyG/mkJHc0YUH8pdWBy2omi9qtCpiIgGjuwO0dQST2l5w==}
@@ -2056,6 +2085,11 @@ packages:
   image-meta@0.2.1:
     resolution: {integrity: sha512-K6acvFaelNxx8wc2VjbIzXKDVB0Khs0QT35U6NkGfTdCmjLNcO2945m7RFNR9/RPVFm48hq7QPzK8uGH18HCGw==}
 
+  image-size@2.0.2:
+    resolution: {integrity: sha512-IRqXKlaXwgSMAMtpNzZa1ZAe8m+Sa1770Dhk8VkSsP9LS+iHD62Zd8FQKs8fbPiagBE7BzoFX23cxFnwshpV6w==}
+    engines: {node: '>=16.x'}
+    hasBin: true
+
   imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
@@ -2254,6 +2288,12 @@ packages:
   jiti@2.4.2:
     resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
     hasBin: true
+
+  jpeg-js@0.4.4:
+    resolution: {integrity: sha512-WZzeDOEtTOBK4Mdsar0IqEU5sMr3vSV2RqkAIzUEV2BHnUfKGyswWFPFwK5EeDo93K3FohSHbLAjj0s1Wzd+dg==}
+
+  js-image-generator@1.0.4:
+    resolution: {integrity: sha512-ckb7kyVojGAnArouVR+5lBIuwU1fcrn7E/YYSd0FK7oIngAkMmRvHASLro9Zt5SQdWToaI66NybG+OGxPw/HlQ==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -4021,6 +4061,11 @@ snapshots:
 
   '@netlify/binary-info@1.0.0': {}
 
+  '@netlify/blobs@10.0.0':
+    dependencies:
+      '@netlify/dev-utils': 3.2.0
+      '@netlify/runtime-utils': 2.1.0
+
   '@netlify/blobs@9.1.5':
     dependencies:
       '@netlify/dev-utils': 3.1.1
@@ -4157,6 +4202,22 @@ snapshots:
       uuid: 11.1.0
       write-file-atomic: 5.0.1
 
+  '@netlify/dev-utils@3.2.0':
+    dependencies:
+      '@whatwg-node/server': 0.10.10
+      ansis: 4.1.0
+      chokidar: 4.0.3
+      decache: 4.6.2
+      dot-prop: 9.0.0
+      env-paths: 3.0.0
+      find-up: 7.0.0
+      image-size: 2.0.2
+      js-image-generator: 1.0.4
+      lodash.debounce: 4.0.8
+      parse-gitignore: 2.0.0
+      uuid: 11.1.0
+      write-file-atomic: 5.0.1
+
   '@netlify/edge-bundler@14.0.6':
     dependencies:
       '@import-maps/resolve': 2.0.0
@@ -4200,6 +4261,25 @@ snapshots:
       '@netlify/zip-it-and-ship-it': 12.1.4(supports-color@10.0.0)
       cpy: 11.1.0
       path-exists: 5.0.0
+    transitivePeerDependencies:
+      - encoding
+      - rollup
+      - supports-color
+
+  '@netlify/functions@4.1.5':
+    dependencies:
+      '@netlify/blobs': 10.0.0
+      '@netlify/dev-utils': 3.2.0
+      '@netlify/serverless-functions-api': 2.1.1
+      '@netlify/zip-it-and-ship-it': 12.1.4(supports-color@10.0.0)
+      cron-parser: 4.9.0
+      decache: 4.6.2
+      extract-zip: 2.0.1
+      is-stream: 4.0.1
+      jwt-decode: 4.0.0
+      lambda-local: 2.2.0
+      read-package-up: 11.0.0
+      source-map-support: 0.5.21
     transitivePeerDependencies:
       - encoding
       - rollup
@@ -4294,6 +4374,8 @@ snapshots:
       execa: 8.0.1
 
   '@netlify/runtime-utils@2.1.0': {}
+
+  '@netlify/serverless-functions-api@2.1.1': {}
 
   '@netlify/serverless-functions-api@2.1.2': {}
 
@@ -4548,6 +4630,8 @@ snapshots:
   '@types/estree@1.0.8': {}
 
   '@types/http-cache-semantics@4.0.4': {}
+
+  '@types/http-errors@2.0.5': {}
 
   '@types/http-proxy@1.17.16':
     dependencies:
@@ -6034,6 +6118,8 @@ snapshots:
 
   image-meta@0.2.1: {}
 
+  image-size@2.0.2: {}
+
   imurmurhash@0.1.4: {}
 
   indent-string@5.0.0: {}
@@ -6227,6 +6313,12 @@ snapshots:
       pretty-format: 27.5.1
 
   jiti@2.4.2: {}
+
+  jpeg-js@0.4.4: {}
+
+  js-image-generator@1.0.4:
+    dependencies:
+      jpeg-js: 0.4.4
 
   js-tokens@4.0.0: {}
 
